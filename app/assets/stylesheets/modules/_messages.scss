@@ -8,25 +8,25 @@
   .sidebar{
     width: 300px;
     background-color: #253141;
-      .sidebar__header{
+      &__header{
         height: 100px;
         display: flex;
         align-items: center;
         
-        .sidebar__header__user-name{
+        &__user-name{
           height: 20px;
           width: 260px;
           margin: 0 auto;
           display: flex;
           justify-content: space-between;
 
-          .sidebar__header__user-name__left-name{
+          &__left-name{
             line-height: 20px;
             color: #ffffff;
             font-size: 16px;
             
           }
-          .sidebar__header__user-name__right-icon{
+          &__right-icon{
             width: 60px;
             height: 20px;
             display: flex;
@@ -34,13 +34,13 @@
             text-decoration: none;
             line-height: 20px;
             
-            .sidebar__header__user-name__right-icon__write{  
+            &__write{  
               .my-white{
               color: #ffffff;
               }
             }
             
-            .sidebar__header__user-name__right-icon__gear{
+            &__gear{
               .my-white2{
                 color: #ffffff;
                 margin-left: 5px;
@@ -52,18 +52,18 @@
 
         }
       }
-      .sidebar__groups{
+      &__groups{
         height: calc(100vh - 100px);
         background-color: #2f3e51;
         padding-top: 20px;
         
-          .sidebar__groups__top{
+          &__top{
             font-size: 15px;
             margin-bottom: 5px;
             margin-left: 20px;
             color: #ffffff;
           }
-            .sidebar__groups__top__second{
+            &__second{
             font-size: 11px;
             margin-bottom: 40px;
             color: #ffffff;
@@ -74,23 +74,23 @@
   .chat-main{
     width: calc(100vw - 300px);
     background-color: #ffffff;
-      .chat-main__header{
+      &__header{
          height: 100px;
          border-bottom: 1px solid #eeeeee;
          display: flex;
          justify-content: space-between;
-         .chat-main__header__left{
+         &__left{
            margin-left: 40px;
            margin-top: 35px;
            font-size: 20px;
            color: #333333;
-           .chat-main__header__left__bottom{
+           &__bottom{
              color: #999999;
              font-size: 12px;
              margin-top: 15px;
             }
           }
-         .chat-main__header__right{
+         &__right{
            margin-top: 28px;
            margin-right: 40px;
            font-size: 16px;
@@ -98,73 +98,73 @@
 
          }
       }
-      .chat-main__groups{
+      &__groups{
         height: calc(100vh - 100px - 90px);
         background-color: #fafafa;
         padding-left: 40px;
         padding-top: 35px;
 
-        .chat-main__groups__top{
-          .chat-main__groups__top__word{
+        &__top{
+          &__word{
             color: #333333;
             font-size: 16px;
             display: flex;
             
-            .chat-main__groups__top__day{
+            &__day{
               color: #999999;
               font-size: 12px;
               margin-left: 15px;
             }
           }
-          .chat-main__groups__coment{
+          &__coment{
             margin-top: 12px;
             color: #434a54;
             font-size: 14px;
           }
         }
-        .chat-main__groups__bottom{
+        &__bottom{
           margin-top: 46px;
-          .chat-main__groups__bottom__word{
+          &__word{
             color: #333333;
             font-size: 16px;
             display: flex;
 
-            .chat-main__groups__bottom__day{
+            &__day{
               color: #999999;
               font-size: 12px;
               margin-left: 15px;
             }
           }
-          .chat-main__groups__bottom__coment{
+          &__coment{
             margin-top: 12px;
             color: #434a54;
             font-size: 14px;
           }
         }
       }
-      .chat-main__form{
+      &__form{
         height: 90px;
         background-color: #d2d2d2;
         display: flex;
         padding: 20px 40px;
-        .chat-main__form__left{
+        &__left{
           width: 100vw;
           height: 50px;
           background-color: #ddd;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          .chat-main__form__left__word{
+          &__word{
 
           }
-          .chat-main__form__left__icon{
+          &__icon{
             margin-right: 10px;
             .input-box__icon{
               display: none;
             }
           }
         }
-        .chat-main__form__right{
+        &__right{
           width: 100px;
           margin-left: 15px;
           padding: 10px 30px;
