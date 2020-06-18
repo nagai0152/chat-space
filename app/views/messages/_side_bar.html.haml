@@ -2,24 +2,28 @@
   .sidebar__header
     .sidebar__header__user-name
       .sidebar__header__user-name__left-name
-        masa
+        = current_user.name
       .sidebar__header__user-name__right-icon
         .sidebar__header__user-name__right-icon__write
-          = link_to "#" do
+          = link_to new_group_path do
             = icon('far', 'edit', class: 'my-white')
         .sidebar__header__user-name__right-icon__gear
-          = link_to "#" do
-            = icon('fas', 'cog', class: 'my-white2')
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: 'icon')
             
 
         
   .sidebar__groups
-    .sidebar__groups__top
-      techcamp
-      .sidebar__groups__top__second
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      = link_to '#' do
+        .sidebar__groups__top
+          = group.name
+        .sidebar__groups__top__second
+          メッセージはまだありません。
+    -#   .sidebar__groups__top__second
+    -#     まだメッセージがありません
 
-    .sidebar__groups__bottom
+    -# .sidebar__groups__bottom
 
 
   -# class: "contents__btn" 
