@@ -1,35 +1,39 @@
 .chat-main
   .chat-main__header
     .chat-main__header__left
-      test
+      = @group.name
       .chat-main__header__left__bottom
-        Member:masa
+        Member：
+        - @group.users.each do |user|
+          = user.name
     .chat-main__header__right
-      = link_to "#" do
+      = link_to edit_group_path(@group) do
         Edit
+  
+
   .chat-main__groups
-    .chat-main__groups__top
-      .chat-main__groups__top__word
-        masa
-        .chat-main__groups__top__day
-          2019/11/20(Wed) 17:43:01
-      .chat-main__groups__coment
-        おはよう
-    .chat-main__groups__bottom
-      .chat-main__groups__bottom__word
-        masa
-        .chat-main__groups__bottom__day
-          2019/11/20(Wed) 17:43:34
-      .chat-main__groups__bottom__coment
-        今日は夜から雨
+    = render @messages
         
   .chat-main__form
-    .chat-main__form__left
-      .chat-main__form__left__word
-        type a message
+    = form_for [@group, @message] , html: {class: 'chat-main__form__left' } do |f|
+      = f.text_field :content, class: 'chat-main__form__left__word', placeholder: 'type a message'
       .chat-main__form__left__icon
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file",class: "input-box__icon"}
-    .chat-main__form__right
-      send
+        = f.label :image, class: 'input-box__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'input-box__icon'
+      = f.submit 'Send', class: 'chat-main__form__right'
+
+  
+
+  -# .chat-main__form
+  -#   .chat-main__form__left
+  -#     .chat-main__form__left__word
+  -#       type a message
+  -#     .chat-main__form__left__icon
+  -#       %label{class: "input-box__image"}
+  -#         = icon('fas', 'image')
+  -#         %input{type: "file",class: "input-box__icon"}
+  -#   .chat-main__form__right
+  -#     send
+
+

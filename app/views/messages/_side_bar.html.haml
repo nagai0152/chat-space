@@ -15,11 +15,11 @@
         
   .sidebar__groups
     - current_user.groups.each do |group|
-      = link_to '#' do
+      = link_to group_messages_path(group) do
         .sidebar__groups__top
           = group.name
         .sidebar__groups__top__second
-          メッセージはまだありません。
+          = group.show_last_message
     -#   .sidebar__groups__top__second
     -#     まだメッセージがありません
 

@@ -150,15 +150,17 @@
         &__left{
           width: 100vw;
           height: 50px;
-          background-color: #ddd;
+          position: relative;
           display: flex;
           align-items: center;
           justify-content: space-between;
           &__word{
-
+            width: 100%;
+            height: 100%;
           }
           &__icon{
-            margin-right: 10px;
+            position: absolute;
+            right: 125px;
             .input-box__icon{
               display: none;
             }
