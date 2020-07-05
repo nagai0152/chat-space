@@ -63,40 +63,6 @@ function buildHTML(message){
    return html;
  };
 }
-  // function buildHTML(message){
-  //    if ( message.image ) {
-  //     var html =
-  //      `<div class="chat-main__groups__top">
-  //         <div class="chat-main__groups__top__word">
-  //           ${message.user_name}
-  //           <div class="chat-main__groups__top__word__day">
-  //             ${message.created_at}
-  //           </div>
-  //         </div>
-  //       </div>
-  //         <p class="chat-main__groups__top__coment">
-  //           ${message.content}
-  //         </p>
-  //       <img src=${message.image} >
-  //     </div>`
-  //     return html;
-  //   } else {
-  //     var html =
-  //      `<div class="chat-main__groups__top">
-  //         <div class="chat-main__groups__top__word">
-  //           ${message.user_name}
-  //           <div class="chat-main__groups__top__word__day">
-  //             ${message.created_at}
-  //           </div>
-  //         </div>
-  //       </div>
-  //         <p class="chat-main__groups__top__coment">
-  //           ${message.content}
-  //         </p>
-  //     </div>`
-  //     return html;
-  //   };
-  // }
 
   $('#new_message').on('submit', function(e){
     e.preventDefault();
