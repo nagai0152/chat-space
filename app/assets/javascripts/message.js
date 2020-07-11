@@ -39,12 +39,11 @@ function buildHTML(message){
            ${message.created_at}
          </div>
        </div>
-     </div>
        <p class="chat-main__groups__top__coment">
          ${message.content}
        </p>
      <img src=${message.image} >
-   </div>`
+    </div>`
    return html;
  } else {
    var html =
@@ -55,11 +54,10 @@ function buildHTML(message){
            ${message.created_at}
          </div>
        </div>
-     </div>
        <p class="chat-main__groups__top__coment">
          ${message.content}
        </p>
-   </div>`
+    </div>`
    return html;
  };
 }

@@ -10,9 +10,8 @@
 -#         = message.content
 -#     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
 
-.message{data: {message: {id: message.id}}}
 
-.chat-main__groups__top
+.chat-main__groups__top{data: {message: {id: message.id}}}
   .chat-main__groups__top__word
     = message.user.name
     .chat-main__groups__top__word__day
